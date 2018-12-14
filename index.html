@@ -1,63 +1,246 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <meta name="viewport" content="width=device-width, initial scale=1">
-    <title>E2</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        E2 - O programa da Escola Superior de Comunicação Social
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/main.js"></script>
 </head>
+
 <body>
-    <div class="top_menu"> <!-- abre a nav menu -->
-        <a href="#intro"> <img src="images/logo.png" class="logo" alt="logo do E2"></a>
-        <!-- imagem logo -->
-        
-        <nav class="menu"> <!-- MENU VERSÃO DESKTOP -->
-        <a href="#services" class="menu_link" title="link para a página serviços">Newsletter</a>
-        <a href="#portfolio" class="menu_link" title="link para a página portfolio">Fala connosco!</a>
-        
-        <a class="menu_mobile" href="#"> <!-- MENU VERSÃO MOBILE -->
-            <img src="images/menu_mobile.png">
-        </a> <!-- fecha mnu mobile -->
+    <!--INICIO DO CONTEUDO-->
+    <div class="container">
+        <nav class="navigation">
+            <div class="navigation__item">
+                <div class="navigation__item__logo">
+                    <img src="media/logo_dark.svg">
+                </div>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item__menu">
+                    <div class="navigation__item__menu__item"><a href="#about">
+                            <h6>Sobre o E2</h6>
+                        </a></div>
+                    <div class="navigation__item__menu__item"><a href="#episodes">
+                            <h6>Episódios</h6>
+                        </a></div>
+                    <div class="navigation__item__menu__item"><a href="#contacts">
+                            <h6>Contactos</h6>
+                        </a></div>
+                </div>
+            </div>
+            <div class="navigation__item">
+                <div class="navigation__item__social">
+                    <div class="navigation__item__social__item"><a target="_blank" href="https://www.youtube.com/channel/UCWhZ5e1PTbwQdBmIO1pTUIQ"><img
+                                src="media/social_yt.svg"></a></div>
+                    <div class="navigation__item__social__item"><a target="_blank" href="https://www.instagram.com/e2.escs/"><img
+                                src="media/social_ig.svg"></a></div>
+                    <div class="navigation__item__social__item"><a target="_blank" href="https://www.facebook.com/e2.escs/"><img
+                                src="media/social_fb.svg"></a></div>
+                </div>
+            </div>
+        </nav>
+        <div class="filler"></div>
+        <main>
+            <section class="module" id="home">
+                <div class="module__home">
+                    <div class="module__home__image">
+                    </div>
+                    <div class="module__home__content _2col">
+                        <div class="module__home__content_block">
+                            <img src="media/logo_normal.svg">
+                        </div>
+                        <div class="module__home__content_block">
+                            <h2>lorem ipsum</h2>
+                            <p class="white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+                                minim veniam, quis nos</p>
+                            <button class="button--red">lorem</button>
+                        </div>
+                    </div>
 
-        </nav> <!-- fecha menu versão desktop -->
-        
-    </div> <!-- fecha a nav - div top_menu-->
-    <div id="intro" class="intro_section flex_container"><img src="images/pic1.jpg">
-        <div class="texto">
-        <h1>Queres saber mais sobre o E2?</h1>
-        <p>Não percas</p>   
-        </div>
-    </div><!-- fecha a secção intro-->
-    
+                </div>
+            </section>
+            <section class="module" id="episodes">
+                <div class="module__episodes _1col">
+                    <div class="module__header">
+                        <h3 class=" bg--red">Lorem Ipsum</h3>
+                    </div>
+                    <div class="module__episodes__content">
+                        <div class="module__episodes__content__videos" style="height: 400px; background-color: aliceblue">
 
-    
-    <div id="videos" class="videos_section">
-        <h2> Descobre os videos mais recentes do E2!</h2>
-        
-        <div class="video">
-        <div class="video_principal">
-        <iframe src="https://www.youtube.com/embed/EZm-m_TswxU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-        </div>
-             <div class="videos_lado">
-            <iframe src="https://www.youtube.com/embed/KzHaApccPZE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-            <iframe width="300" height="230" src="https://www.youtube.com/embed/v6DKFpgWBn8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-        </div>
-</div>
+                        </div>
+                        <div class="module__episode__content__cta">
+                            <button class="button--red button--cta">Lorem ipsum dolor</button>
+                        </div>
+                    </div>
 
-  </div>
-        <div id="services" class="services_section"> <!-- abre secção services -->
-        <h2>O que é o E2?</h2>
-                <p>O E2, uma produção da Escola Superior de Comunicação Social, é um programa televisivo essencialmente de entretenimento, humor, cultura e informação. Passa semanalmente aos domingos, às 20h00 (com repetições nas madrugadas de terças para quartas), e já conta com 15 temporadas.</p>
-                        
-    </div> <!-- fecha a secção services-->
-    
-    <footer>
-        <p> 2018 (C) ALL RIGHTS RESERVED TO E2 </p>
-    </footer>
-
-    <!-- Javascript -->
-<script src="https://www.w3schools.com/lib/w3.js"></script>
-<script src="js/javascript.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            </section>
+            <section class="module" id="about">
+                <div class="module__about">
+                    <div class="module__about__image"></div>
+                    <div class="module__about__text">
+                        <div class="module__header">
+                            <h3 class="bg--blue">Lorem Ipsum</h3>
+                        </div>
+                        <ul class="accordion">
+                            <li class="accordion--bluebackground">
+                                <label for="first">Lorem ipsum</label>
+                                <input type="radio" name="accordion" id="first" checked>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet
+                                        hendrerit venenatis. Etiam a mauris vitae risus suscipit varius quis vitae
+                                        purus. Nullam nisl tellus, porttitor ac fringilla vitae, congue eget felis.
+                                        Vivamus dolor orci, laoreet non ullamcorper vitae, aliquam ac enim. Aliquam
+                                        varius eu erat sed ultricies. Sed aliquet purus id gravida interdum. Vivamus
+                                        vulputate accumsan felis, lacinia sollicitudin purus sodales in. Maecenas ut
+                                        scelerisque lorem. Integer semper nunc in nunc porttitor, vel dictum est
+                                        vehicula. Donec nec semper urna. Mauris ultricies tristique eros, eget vehicula
+                                        tellus viverra sit amet. Phasellus vel nulla lacus. Proin et tortor vestibulum,
+                                        dictum nisi at, blandit magna. Aliquam in tincidunt libero. Aliquam vitae
+                                        convallis lectus, sed interdum nulla.</p>
+                                </div>
+                            </li>
+                            <li class="accordion--bluebackground">
+                                <label for="second">Dolor Sit</label>
+                                <input type="radio" name="accordion" id="second">
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet
+                                        hendrerit venenatis. Etiam a mauris vitae risus suscipit varius quis vitae
+                                        purus. Nullam nisl tellus, porttitor ac fringilla vitae, congue eget felis.
+                                        Vivamus dolor orci, laoreet non ullamcorper vitae, aliquam ac enim. Aliquam
+                                        varius eu erat sed ultricies. Sed aliquet purus id gravida interdum. Vivamus
+                                        vulputate accumsan felis, lacinia sollicitudin purus sodales in. Maecenas ut
+                                        scelerisque lorem. Integer semper nunc in nunc porttitor, vel dictum est
+                                        vehicula. Donec nec semper urna. Mauris ultricies tristique eros, eget vehicula
+                                        tellus viverra sit amet. Phasellus vel nulla lacus. Proin et tortor vestibulum,
+                                        dictum nisi at, blandit magna. Aliquam in tincidunt libero. Aliquam vitae
+                                        convallis lectus, sed interdum nulla.</p>
+                                </div>
+                            </li>
+                            <li class="accordion--bluebackground">
+                                <label for="third">Amet</label>
+                                <input type="radio" name="accordion" id="third">
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet
+                                        hendrerit venenatis. Etiam a mauris vitae risus suscipit varius quis vitae
+                                        purus. Nullam nisl tellus, porttitor ac fringilla vitae, congue eget felis.
+                                        Vivamus dolor orci, laoreet non ullamcorper vitae, aliquam ac enim. Aliquam
+                                        varius eu erat sed ultricies. Sed aliquet purus id gravida interdum. Vivamus
+                                        vulputate accumsan felis, lacinia sollicitudin purus sodales in. Maecenas ut
+                                        scelerisque lorem. Integer semper nunc in nunc porttitor, vel dictum est
+                                        vehicula. Donec nec semper urna. Mauris ultricies tristique eros, eget vehicula
+                                        tellus viverra sit amet. Phasellus vel nulla lacus. Proin et tortor vestibulum,
+                                        dictum nisi at, blandit magna. Aliquam in tincidunt libero. Aliquam vitae
+                                        convallis lectus, sed interdum nulla.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="arrow-down">
+                            <img src="media/arrow.svg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="modules" id="contacts">
+                <div class="module__contacts">
+                    <div class="module__header">
+                        <h3 class="bg--green">Lorem Ipsum</h3>
+                    </div>
+                    <ul class="accordion">
+                            <li class="accordion--greenbackground">
+                                <label for="contact-1">Lorem ipsum</label>
+                                <input type="radio" name="contacts" id="contact-1" checked>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet
+                                        hendrerit venenatis. Etiam a mauris vitae risus suscipit varius quis vitae
+                                        purus. Nullam nisl tellus, porttitor ac fringilla vitae, congue eget felis.
+                                        Vivamus dolor orci, laoreet non ullamcorper vitae, aliquam ac enim. Aliquam
+                                        varius eu erat sed ultricies. Sed aliquet purus id gravida interdum. Vivamus
+                                        vulputate accumsan felis, lacinia sollicitudin purus sodales in. Maecenas ut
+                                        scelerisque lorem. Integer semper nunc in nunc porttitor, vel dictum est
+                                        vehicula. Donec nec semper urna. Mauris ultricies tristique eros, eget vehicula
+                                        tellus viverra sit amet. Phasellus vel nulla lacus. Proin et tortor vestibulum,
+                                        dictum nisi at, blandit magna. Aliquam in tincidunt libero. Aliquam vitae
+                                        convallis lectus, sed interdum nulla.</p>
+                                </div>
+                            </li>
+                            <li class="accordion--greenbackground">
+                                <label for="contact-2">Dolor Sit</label>
+                                <input type="radio" name="contacts" id="contact-2">
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet
+                                        hendrerit venenatis. Etiam a mauris vitae risus suscipit varius quis vitae
+                                        purus. Nullam nisl tellus, porttitor ac fringilla vitae, congue eget felis.
+                                        Vivamus dolor orci, laoreet non ullamcorper vitae, aliquam ac enim. Aliquam
+                                        varius eu erat sed ultricies. Sed aliquet purus id gravida interdum. Vivamus
+                                        vulputate accumsan felis, lacinia sollicitudin purus sodales in. Maecenas ut
+                                        scelerisque lorem. Integer semper nunc in nunc porttitor, vel dictum est
+                                        vehicula. Donec nec semper urna. Mauris ultricies tristique eros, eget vehicula
+                                        tellus viverra sit amet. Phasellus vel nulla lacus. Proin et tortor vestibulum,
+                                        dictum nisi at, blandit magna. Aliquam in tincidunt libero. Aliquam vitae
+                                        convallis lectus, sed interdum nulla.</p>
+                                </div>
+                            </li>
+                            <li class="accordion--greenbackground">
+                                <label for="contact-3">Amet</label>
+                                <input type="radio" name="contacts" id="contact-3">
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet
+                                        hendrerit venenatis. Etiam a mauris vitae risus suscipit varius quis vitae
+                                        purus. Nullam nisl tellus, porttitor ac fringilla vitae, congue eget felis.
+                                        Vivamus dolor orci, laoreet non ullamcorper vitae, aliquam ac enim. Aliquam
+                                        varius eu erat sed ultricies. Sed aliquet purus id gravida interdum. Vivamus
+                                        vulputate accumsan felis, lacinia sollicitudin purus sodales in. Maecenas ut
+                                        scelerisque lorem. Integer semper nunc in nunc porttitor, vel dictum est
+                                        vehicula. Donec nec semper urna. Mauris ultricies tristique eros, eget vehicula
+                                        tellus viverra sit amet. Phasellus vel nulla lacus. Proin et tortor vestibulum,
+                                        dictum nisi at, blandit magna. Aliquam in tincidunt libero. Aliquam vitae
+                                        convallis lectus, sed interdum nulla.</p>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+            </section>
+        </main>
+        <footer>
+                <nav class="navigation not-fixed">
+                        <div class="navigation__item">
+                            <div class="navigation__item__logo">
+                                <img src="media/logo_dark.svg">
+                            </div>
+                        </div>
+                        <div class="navigation__item">
+                            <div class="navigation__item__menu">
+                                <div class="navigation__item__menu__item"><a href="#about">
+                                        <h6>Sobre o E2</h6>
+                                    </a></div>
+                                <div class="navigation__item__menu__item"><a href="#episodes">
+                                        <h6>Episódios</h6>
+                                    </a></div>
+                                <div class="navigation__item__menu__item"><a href="#contacts">
+                                        <h6>Contactos</h6>
+                                    </a></div>
+                            </div>
+                        </div>
+                        <div class="navigation__item">
+                            <div class="navigation__item__social">
+                                <div class="navigation__item__social__item"><a target="_blank" href="https://www.youtube.com/channel/UCWhZ5e1PTbwQdBmIO1pTUIQ"><img
+                                            src="media/social_yt.svg"></a></div>
+                                <div class="navigation__item__social__item"><a target="_blank" href="https://www.instagram.com/e2.escs/"><img
+                                            src="media/social_ig.svg"></a></div>
+                                <div class="navigation__item__social__item"><a target="_blank" href="https://www.facebook.com/e2.escs/"><img
+                                            src="media/social_fb.svg"></a></div>
+                            </div>
+                        </div>
+                    </nav>
+        </footer>
+    </div>
 </body>
+
 </html>

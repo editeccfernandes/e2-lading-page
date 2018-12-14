@@ -1,264 +1,474 @@
-@charset "utf-8";
-/* CSS Document */
+/**
+ *
+ * CSS da LANDING PAGE do E2
+ * DEZEMBRO 2018
+ *
+ */
 
-/* LIMPAR E DEFINIR INSTRUÇÕES GERAIS (o * é DEUS) */
-* {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
+/*=============================================
+=                    RESET                    =
+=============================================*/
+
+/* LIMPAR ESTILOS QUE VEM POR DEFEITO EM TODOS OS BROWSERS PARA REDUZIR INCONSISTENCIAS */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
     text-decoration: none;
-    font-family: 'din', sans-serif;
-    box-sizing: border-box; /* Tanto o padding como o border serão adicionados no interior do elemento, sem alterar a altura e a largura deste */ 
 }
 
-html{
-    max-width: 1928px;
-    margin: 0 auto;
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 
-/* TÉCNICA PARA QUE AS DIVS PARENT QUE CONTÉM ELEMENTOS COM O FLOAT SE MANTENHAM A FUNCIONAR CORRETAMENTE */
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+body {
+    line-height: 1;
 }
 
-/*** BARRA DE TOPO ***/
-.top_menu {
-    width: 100%;
-    height: 75px;
-    z-index: 2;
-    position: absolute;
+ol, ul {
+    list-style: none;
 }
 
-.logo {
-    float: left;
-    width: 40px;
-    height: auto;
-    margin-left: 2%;
-    margin-top: 20px;
+blockquote, q {
+    quotes: none;
 }
 
-.menu{
-    padding-top: 32px;
-    width: 50%;
-    right: 0;
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
 }
 
-.menu a{
-    float: right;
-    margin-right: 2%;
-    color: #3A79BD;
-    background: white;
-    letter-spacing: 3px;
-    padding: 10px;
-    font-size: 0.9em;
-    font-weight: 300;
-    text-transform: upper;
-    font-family: "Poppins", sans-serif;
-        /* transition*/
-        -webkit-transition: 0.5s; /* Para que esta transição funcione nas versões do browser safari da 3.1 à 6.0 */
-        transition:0.5s;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-.menu a:hover {
-    color: white;
-    background-color: #3A79BD;
+/*=====  End of RESET  ======*/
+
+/*=============================================
+=                    FONTS                    =
+=============================================*/
+
+@font-face {
+    font-family: 'DIN';
+    src: url('hinted-DIN-Medium.eot');
+    src: local('DIN Medium'), local('DIN-Medium'), url('hinted-DIN-Medium.eot?#iefix') format('embedded-opentype'), url('hinted-DIN-Medium.woff2') format('woff2'), url('hinted-DIN-Medium.woff') format('woff'), url('hinted-DIN-Medium.ttf') format('truetype'), url('hinted-DIN-Medium.svg#DIN-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
 }
 
-.menu_link:nth-child(3){ /* forma de nos referirmos a todos os elementos multiplos de 3 com a class menu_link */
-    margin-right: 0;
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('hinted-AvenirNextLTPro-Demi.eot');
+    src: local('Avenir Next LT Pro Demi'), local('AvenirNextLTPro-Demi'), url('hinted-AvenirNextLTPro-Demi.eot?#iefix') format('embedded-opentype'), url('hinted-AvenirNextLTPro-Demi.woff2') format('woff2'), url('hinted-AvenirNextLTPro-Demi.woff') format('woff'), url('hinted-AvenirNextLTPro-Demi.ttf') format('truetype'), url('hinted-AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.menu_mobile {
-    display: none;
-    float: right;
+/*=====  End of FONTS  ======*/
+
+/*=============================================
+=                   VARIABLES                 =
+=============================================*/
+
+:root {
+    --color-grey_dark: #1d1e1c;
+    --color-grey_middle: #b1b1b1;
+    --color-grey_light: #e6e5e5;
+    --color-red: #e8423a;
+    --color-green: #39b080;
+    --color-green_dark: #309971;
+    --color-yellow: #fcc347;
+    --color-blue: #3a79bd;
+    --color-blue_dark: #3073aa;
+    --color-blue_darker: #063759;
+    --color-white: #ffffff;
+    --font-primary: 'DIN', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --font-secondary: 'Avenir Next LT Pro', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.menu_mobile img{
-    width: 20px;
-    height: auto;
+/*=====  End of VARIABLES  ======*/
+
+/*=============================================
+=               GENERAL STYLES                =
+=============================================*/
+
+* {
+    scroll-behavior: smooth;
 }
 
-/*** SECÇÃO INTRO ***/
-.intro_section {
-    width: 100%;
-    height: 600px; /* Viewport Height */
-    background-size: cover;
-    flex-direction: column;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-}
-.intro_section:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100vh;
-  background-image: linear-gradient(to top, #3A79BD, #3A79Bd);
-  opacity: .6;
-  z-index: 1;
-}
-.intro_section img{
-    z-index: 0;
-}
-.flex_container{ /* Alinhamento Vertical */
-    display: flex; /* Mostrar os elementos block */
-    align-items: center; /* Vertical Center Alignment */
-    justify-content: center; /* Horizontal Center Alignment */
+body {
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
-.intro_section h1{
-    font-size: 1.5rem;
-    background: #E8423A;
-    padding: 5px;
-    text-align: center;
-    color: white;
-    font-family: "din", sans-serif;
-    clear: both;
-    z-index: 2;
+img {
+    height: 100%;
 }
 
-.intro_section p{
-    margin-top: 0px;
-    background-color: #E8423A;
-    padding: 10px;
-    color: white;
-    text-align: center;
-    z-index: 99000;
+h2, h3, h6 {
+    font-family: var(--font-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-white);
 }
 
-/*** SECÇÃO SERVICES ***/
-h2{
-    font-size: 3rem;
-    text-align: center;
-    color: white;
-    font-family: "din light", sans-serif;
-    letter-spacing: 2px;
-    width: 40%;
+h2 {
+    font-size: 1.3em;
+    margin-bottom: 30px;
 }
 
-.services_section {
-    padding: 30px;
-    width: 100%;
-    background-color: #3A79BD;
-    float: left;
-    display: inline-block;
-    padding-bottom: 0px;
+h3 {
+    padding: 10px 20px;
+    transform: skew(-8deg) rotate(-4.5deg);
+    font-size: 1.6em;
+}
+
+h6 {
+    font-size: .9em;
+}
+
+p {
+    font-family: var(--font-secondary);
     margin-bottom: 10px;
 }
-.services_section h2{
-    display: inline-block;
-}
-.services_section p {
-    width: 45%;
-    margin-bottom: 30px;
-    display: inline-block;
-    float: right;
-    margin-right: 8%;
-    font-size: 1.5rem;
-    color: white;
-}
-.videos_section{
-    width: 96%;
-    height: auto;
-    float: left;
-}
-.videos_section h2{
-    color: black;
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    width: 100%;
-    text-align: center;
-}
 
-/*** SECÇÃO FOOTER ***/
-footer {
-    width: 100%;
-    height: 100px;
-    background-color: #3A79BD;
-    float: left;
-    text-align-last: center;
-    clip-path: polygon(0 34%, 100% 0, 100% 100%, 0% 100%);
-
-}
-footer p{
-    color: white;
-    line-height: 100px;
-    font-family: "din light", sans-serif;
+button {
+    padding: 10px 20px;
+    width: max-content;
+    margin: 0 auto;
     text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 2px;
+    background-color: transparent;
+    border: transparent;
+    font-weight: bold;
+    color: white;
+    font-family: var(--font-primary);
+    cursor: pointer;
+    transition: all .3s ease;
+    margin: 20px auto;
 }
 
-/** MEDIA QUERIES - ecrãs com largura até 768px **/
-
-@media screen and (max-width:960px) {
-    .portfolio_item {
-        width: 50%;
-    }
-    }
-
-@media screen and (max-width:768px){
-    .logo{
-        width: 100px;
-        height: auto;
-        margin-top: 35px;
-    }
-    .menu_link {
-        display: none;
-    }
-    
-    .menu_mobile {
-        display: block;
-    }
-    
-    h1{font-size: 60px;}
-    
-    h2{font-size: 40px;}
-    
-    .service{
-        width:100%;
-        margin-bottom: 30px;
-    }
-    .portfolio_item{
-        width: 100%
-    }
+.button--red:hover {
+    transform: skew(-8deg) rotate(4.5deg);
 }
 
+.button--red {
+    background-color: var(--color-red);
+}
 
+.button--cta {
+    margin: 30px;
+    padding: 10px 30px;
+    font-size: 1.2em;
+}
 
+.button--cta:hover {
+    transform: skew(8deg) rotate(-4.5deg);
+}
 
+.container {
+    display: block;
+}
 
-.video{
-    height: auto;
+.white {
+    color: var(--color-white);
+}
+
+.bg--red {
+    background-color: var(--color-red);
+}
+
+.bg--blue {
+    background-color: var(--color-blue);
+}
+
+.bg--green{
+    background-color: var(--color-green);
+}
+/*=====  End of GENERAL STYLES  ======*/
+
+/*=============================================
+=                 GRID SYSTEM                 =
+=============================================*/
+
+._1col {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+._2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    width: 100vw;
+}
+
+/*=====  End of GRID SYSTEM  ======*/
+
+/*=============================================
+=                NAVIGATION BAR               =
+=============================================*/
+
+.navigation {
+    background-color: var(--color-grey_dark);
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 20px;
+    height: 70px;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+}
+.not-fixed{
+    position: relative;
+}
+.filler{
+    height: 70px;
+}
+.navigation__item {
+    display: grid;
+}
+
+.navigation__item__logo {
+    height: 50px;
+}
+
+.navigation__item__menu__item {
+    display: inline-grid;
+    margin: 0px 5px;
+}
+
+.navigation__item__social__item {
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+}
+
+/*=====  End of NAVIGATION BAR  ======*/
+
+/*=============================================
+=                    MODULE                   =
+=============================================*/
+
+.module__header {
+    width: max-content;
+    margin: 60px auto;
+    display: block;
+}
+
+/*=============================================
+=                     HOME                    =
+=============================================*/
+
+/*=====  End of HOME  ======*/
+
+.module__home {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 425px;
+}
+
+.module__home__image {
+    width: 100%;
+    height: 390px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../media/pic1.jpg");
+    background-position: center center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+    position: absolute;
+    z-index: -1;
+}
+
+.module__home__image:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-image: linear-gradient(to top, var(--color-green), var(--color-green));
+    opacity: .75;
+    z-index: 1;
+}
+
+.module__home__content_block {
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    /* text-align: center; */
+    padding: 50px;
+}
+
+.module__home__content_block img {
+    height: 300px;
+}
+
+.module__home__content {
+}
+
+.module__episode__content__cta {
     text-align: center;
-    margin: 3% 0 3% 0;
 }
-.video_principal{
-    height: 340px;
-    width:40rem;
-    margin-right: 2%;
+
+/*=====  End of MODULE  ======*/
+
+/*=============================================
+=                    ABOUT                    =
+=============================================*/
+
+.module__about {
+    position: relative;
+    height: 800px;
+}
+
+.module__about__image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../media/pic1.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+    position: absolute;
+    z-index: -1;
+}
+
+.module__about__image:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-image: linear-gradient(to top, var(--color-blue_darker), var(--color-blue_darker));
+    opacity: .75;
+    z-index: 1;
+}
+
+.module__about__text {
+    display: block;
+    padding: 40px 0px;
+}
+
+/*=====  End of ABOUT  ======*/
+
+/*=============================================
+=                  ACCORDION                  =
+=============================================*/
+
+.accordion {
+    margin: 100px auto;
+    padding: 0;
+    width: 70%;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.accordion li:nth-child(2) {
+    width: 90%;
+}
+
+.accordion li:nth-child(3) {
+    width: 80%;
+}
+
+.accordion li label {
+    padding: 10px;
+    font-family: var(--font-primary);
+    font-size: 1.1em;
+    line-height: 17px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin: 10px;
+    vertical-align: middle;
     display: inline-block;
+    width: -webkit-fill-available;
+    cursor: pointer;
 }
 
-.videos_lado{
-    height: 167px;
-    display: inline-block;
-    width: 15rem;
-}
-.videos_lado iframe{
-    padding-bottom: 4%;
+.accordion--bluebackground {
+    background-color: var(--color-blue);
+    border-bottom: solid 8px var(--color-blue_dark);
 }
 
-.videos_lado iframe:last-child{
-    padding-bottom: 0%;
+.accordion--greenbackground {
+    background-color: var(--color-green);
+    border-bottom: solid 8px var(--color-green_dark);
 }
 
-.video iframe{
-	width: 100%;
-	height: 100%;
+.accordion label+input[type='radio'] {
+    display: none;
+}
+
+.accordion .content {
+    height: 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+    font-size: 1em;
+    background-color: var(--color-white);
+    -webkit-transition: height 0.3s ease-in;
+    -moz-transition: height 0.3s ease-in;
+    -o-transition: height 0.3s ease-in;
+    transition: height 0.3s ease-in;
+    overflow: hidden;
+}
+
+.accordion label+input[type='radio']:checked+.content {
+    height: 200px;
+    /* overflow-y:scroll; */
+    padding: 10px;
+}
+
+/*=====  End of ACCORDION  ======*/
+
+
+/*=============================================
+=                 ARROW DOWN                 =
+=============================================*/
+
+.arrow-down img{
+    width: 30px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    left: calc(50% - 15px);
+    bottom: -20px;
+}
+
+/*=====  End of ARROW DOWN  ======*/
+
+
+/*=============================================
+=                  CONTACTS                   =
+=============================================*/
+.module__contacts{
+    padding-top: 40px;
+}
+
+
+/*=====  End of CONTACTS  ======*/
+
+.module__episodes {
+    padding-top: 40px;
 }
