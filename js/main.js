@@ -16,6 +16,7 @@ $(function () {
 
         } else if (scroll == 0) {
             nav.removeClass("navigation--small");
+            $('.top').fadeOut(300);
 
         } else {
             $('.top').fadeOut(300);
@@ -37,16 +38,6 @@ $.fn.inviewport = function () {
 
     return element_height > window_scroll_top && offset_top < viewport_bottom;
 };
-
-$(window).on('resize scroll', function () {
-    if ($('#home').inviewport()) {
-        console.log('a')
-    }
-    else {
-
-        console.log('b')
-    }
-});
 
 $(window).on('resize scroll', function () {
     if ($('#about').inviewport()) {
@@ -82,8 +73,19 @@ $(window).on('resize scroll', function () {
 $(window).scroll(function () {
     if ($(window).scrollTop() == 0) {
         $('#episodes-nav').removeClass(' bg--red');
+        $('#contacts-nav').removeClass(' bg--green');
+        $('#about-nav').removeClass(' bg--blue');
+
     }
 });
 
 
 
+var $title = $('.js-title');
+var copy   = '.js-copy';
+
+$title.click(function () {
+  $(this).next(copy).slideToggle();
+  $(this).parent().siblings().children().next().slideUp();
+  return false;
+})
