@@ -67,7 +67,8 @@ body * {
 #ibacordotcom-content {
 	padding: 0 100px;
 	height: 600px;
-	font-family: var(--font-primary);
+	font-family: var(--font-secondary);
+	font-size: .9em;
 }
 
 iframe,input,textarea,button{border:0}

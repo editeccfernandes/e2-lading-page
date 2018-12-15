@@ -411,7 +411,7 @@ img.top__img {
 
 .module__about {
     position: relative;
-    height: 800px;
+    height: 100%;
 }
 
 .module__about__image {
@@ -579,6 +579,8 @@ h4 {
     width: 90%;
     font-family: var(--font-secondary);
     /* background: #f4f4f4; */
+    display: BLOCK;
+    HEIGHT: max-content;
   }
   .accordion__item {
     background-color: var(--color-blue_dark);
