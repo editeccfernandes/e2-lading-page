@@ -131,6 +131,13 @@ h3 {
 
 h6 {
     font-size: .9em;
+    padding: 10px;
+}
+
+h6:hover {
+    background-color: var(--color-white);
+    color: var(--color-grey_dark);
+    transition: all .2s ease-in-out;
 }
 
 p {
@@ -153,7 +160,7 @@ button, .button {
     margin: 20px auto;
 }
 
-.button--red:hover {
+.button--red:hover, .button--blue:hover {
     transform: skew(-8deg) rotate(-4.5deg);
 }
 
@@ -195,14 +202,17 @@ button, .button {
 
 .bg--red {
     background-color: var(--color-red);
+    transition: all .2s ease-in-out;
 }
 
 .bg--blue {
     background-color: var(--color-blue);
+    transition: all .2s ease-in-out;
 }
 
 .bg--green {
     background-color: var(--color-green);
+    transition: all .2s ease-in-out;
 }
 
 /*=====  End of GENERAL STYLES  ======*/
@@ -249,8 +259,20 @@ button, .button {
     position: fixed;
     z-index: 100;
     width: 100vw;
+    transition: all .2s ease-in-out;
 }
 
+.navigation img{
+    transition: all .2s ease-in-out;
+}
+
+.navigation--small{
+    height: 50px;
+}
+.navigation--small img{
+    transform: scale(.85);
+    transition: all .2s ease-in-out;
+}
 .not-fixed {
     position: relative;
 }
@@ -265,6 +287,7 @@ button, .button {
 
 .navigation__item__logo {
     height: 50px;
+    cursor: pointer;
 }
 
 .navigation__item__menu__item {
@@ -276,6 +299,22 @@ button, .button {
     height: 30px;
     display: inline-block;
     margin: 5px;
+}
+
+.top {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1000;
+}
+
+img.top__img {
+    filter: grayscale(100) invert(100%) contrast(100);
+    height: 40px;
+    transform: rotate(180deg);
+}
+
+.active {
 }
 
 /*=====  End of NAVIGATION BAR  ======*/

@@ -19,20 +19,20 @@
     <div class="container">
         <nav class="navigation">
             <div class="navigation__item">
-                <div class="navigation__item__logo">
+                    <div class="navigation__item__logo">
                     <img src="media/logo_dark.svg">
                 </div>
             </div>
             <div class="navigation__item">
                 <div class="navigation__item__menu">
+                        <div class="navigation__item__menu__item"><a href="#episodes">
+                                <h6 id="episodes-nav">Episódios</h6>
+                            </a></div>
                     <div class="navigation__item__menu__item"><a href="#about">
-                            <h6>Sobre o E2</h6>
-                        </a></div>
-                    <div class="navigation__item__menu__item"><a href="#episodes">
-                            <h6>Episódios</h6>
+                            <h6 id="about-nav">Sobre o E2</h6>
                         </a></div>
                     <div class="navigation__item__menu__item"><a href="#contacts">
-                            <h6>Contactos</h6>
+                            <h6 id="contacts-nav">Contactos</h6>
                         </a></div>
                 </div>
             </div>
@@ -49,6 +49,10 @@
         </nav>
         <div class="filler"></div>
         <main>
+
+            <div class="top">
+                <button class="bg--blue"><img class="top__img" src="media/arrow.svg"></button>
+            </div>
             <section class="module" id="home">
                 <div class="module__home">
                     <div class="module__home__image">
@@ -180,28 +184,28 @@
                             <div class="module__header">
                                 <h3 class="bg--green">Contactos</h3>
                             </div>
-                            <div class="module__content__sub"> 
-                            <div class="module__block">
-                                <h4>Lorem Isum</h4>
-                                <p>Dolor Sit Amet</p>
-                            </div>
-                            <div class="module__block">
+                            <div class="module__content__sub">
+                                <div class="module__block">
                                     <h4>Lorem Isum</h4>
                                     <p>Dolor Sit Amet</p>
                                 </div>
                                 <div class="module__block">
-                                        <h4>Lorem Isum</h4>
-                                        <p>Dolor Sit Amet</p>
-                                    </div>
-                            
+                                    <h4>Lorem Isum</h4>
+                                    <p>Dolor Sit Amet</p>
+                                </div>
+                                <div class="module__block">
+                                    <h4>Lorem Isum</h4>
+                                    <p>Dolor Sit Amet</p>
+                                </div>
+
                             </div>
-                           
+
                         </div>
                         <div class="module__content">
                             <div class="module__header">
                                 <h3 class="bg--blue">Lorem Ipsum</h3>
                             </div>
-                            <form class="formulario" action="mail.php" method="POST" enctype="application/x-www-form-urlencoded">
+                            <form class="formulario" action="mail.php" method="POST" id="contact-form">
                                 <div class="formulario__content">
                                     <div class="formulario__content__field">
                                         <p class="form-label">Nome</p> <input type="text" name="name">

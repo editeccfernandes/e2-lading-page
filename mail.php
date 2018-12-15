@@ -10,5 +10,7 @@ $recipient = "dangerouswho@gmail.com";
 $subject = "[NOVA MENSAGEM A PARTIR DO SITE DO E2]: ".$_POST['subject'];
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-echo "A tua mensagem foi enviada";
+header('location: index.html');
+print("<script>alert('a');</script>");
+
 ?>
