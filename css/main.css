@@ -492,8 +492,8 @@ video {
     min-height: 100%;
     min-width: 100%;
     position: absolute;
-    top: calc(85% - 70px);
-    transform: translate(-50%, -50%);
+    /* top: calc(70% - 70px); */
+    transform: translate(-50%, 0%);
 }
 
 .formulario {
