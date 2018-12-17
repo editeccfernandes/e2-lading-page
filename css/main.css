@@ -561,7 +561,7 @@ h4 {
 =============================================*/
 .accordion {
     max-width: 90%;
-    margin: 4rem auto;
+    margin: 6rem auto;
     width: 90%;
     font-family: var(--font-secondary);
     /* background: #f4f4f4; */
@@ -602,6 +602,11 @@ h4 {
   }
   
 /*=====  End of NEW ACCORDION  ======*/
+
+form#mc-embedded-subscribe-form {
+    PADDING: 25PX;
+}
+
 
 @media only screen and (max-width: 900px) {
     .module__home__content_block {
@@ -659,6 +664,32 @@ h4 {
     
     .ibacordotcom-unit.ibacordotcom-vid-kenca {
         height: max-content;
+        display: block;
+    }
+
+    .formulario__content__field {
+        display: block;
+    }
+    
+    p.form-label {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    
+    input[type="text"], input[type="email"] {
+        width: 85%;
+    }
+    
+    textarea {
+        width: 85%;
+    }
+    
+    input[type="email"] {
+        margin: 25px 0px;
+    }
+    
+    div#mc_embed_signup {
         display: block;
     }
     
