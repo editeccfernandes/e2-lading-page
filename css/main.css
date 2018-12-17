@@ -678,11 +678,11 @@ form#mc-embedded-subscribe-form {
     }
     
     input[type="text"], input[type="email"] {
-        width: 85%;
+        width: 100%;
     }
     
     textarea {
-        width: 85%;
+        width: 100%;
     }
     
     input[type="email"] {
