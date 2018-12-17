@@ -614,14 +614,27 @@ h4 {
     }
     
     .module__home__image {
-        height: 850px;
+        height: 15%;
     }
     
     .navigation {
         grid-template-columns: 1fr;
         grid-gap: 0px;
-        height: 250px;
+        height: max-content;
         position: initial;
+    }
+    .navigation__item {
+        display: grid;
+        margin: 15px;
+    }
+
+    .navigation__item__menu {
+        margin: 10px 0px;
+    }
+
+    .navigation__item__menu__item {
+        display: block;
+        margin: 5px;
     }
     
     .filler {
