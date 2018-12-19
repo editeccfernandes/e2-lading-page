@@ -11,6 +11,5 @@ $subject = "[NOVA MENSAGEM A PARTIR DO SITE DO E2]: ".$_POST['subject'];
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 header('location: index.html');
-print("<script>alert('a');</script>");
 
 ?>

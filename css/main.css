@@ -64,18 +64,20 @@ table {
 }
 
 @font-face {
-    font-family: 'Avenir Next Demi';
-    src: url('../media/fonts/hinted-AvenirNextLTPro-Demi.eot');
-    src: local('Avenir Next LT Pro Demi'), local('AvenirNextLTPro-Demi'),
-        url('../media/fonts/hinted-AvenirNextLTPro-Demi.eot?#iefix') format('embedded-opentype'),
-        url('../media/fonts/hinted-AvenirNextLTPro-Demi.woff2') format('woff2'),
-        url('../media/fonts/hinted-AvenirNextLTPDro-Demi.woff') format('woff'),
-        url('../media/fonts/hinted-AvenirNextLTPro-Demi.ttf') format('truetype'),
-        url('../media/fonts/hinted-AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi') format('svg');
-    font-weight: normal;
+    font-family: 'Avenir LT Std';
+    src: url('../media/fonts/AvenirLTStd-Light.eot');
+    src: local('Avenir LT Std 35 Light'), local('AvenirLTStd-Light'),
+        url('../media/fonts/AvenirLTStd-Light.eot?#iefix') format('embedded-opentype'),
+        url('../media/fonts/AvenirLTStd-Light.woff2') format('woff2'),
+        url('../media/fonts/AvenirLTStd-Light.woff') format('woff'),
+        url('../media/fonts/AvenirLTStd-Light.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
 }
 
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
 /*=====  End of FONTS  ======*/
@@ -97,7 +99,7 @@ table {
     --color-blue_darker: #063759;
     --color-white: #ffffff;
     --font-primary: 'Avenir Next Bold', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    --font-secondary: 'Avenir Next Demi', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --font-secondary: 'Avenir Lt Std', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /*=====  End of VARIABLES  ======*/
@@ -151,7 +153,6 @@ h6:hover {
 p {
     font-family: var(--font-secondary);
     margin-bottom: 10px;
-    font-family: 'Avenir Next Demi';
 }
 
 button, .button {
@@ -170,7 +171,7 @@ button, .button {
 }
 
 .button--red:hover, .button--blue:hover {
-    transform: skew(-8deg) rotate(-4.5deg);
+    transform: scale(1.1);
 }
 
 .button--red {
@@ -189,7 +190,7 @@ button, .button {
 }
 
 .button--cta:hover {
-    transform: skew(-8deg) rotate(-4.5deg);
+    transform: scale(1.1);
 }
 
 .buttons {
@@ -221,7 +222,21 @@ button, .button {
 
 .bg--green {
     background-color: var(--color-green);
+	transition: all .2s ease-in-out;
+	border-bottom: var(--color-green_dark);
+}
+
+.bg--green--dark{
+	background-color: var(--color-green_dark)
+}
+
+.bg--yellow {
+    background-color: var(--color-yellow);
     transition: all .2s ease-in-out;
+}
+
+.bold{
+	font-weight: bold;
 }
 
 /*=====  End of GENERAL STYLES  ======*/
@@ -319,7 +334,7 @@ button, .button {
 }
 
 img.top__img {
-    filter: grayscale(100) invert(100%) contrast(100);
+    filter: grayscale(100) invert(0%) contrast(100);
     height: 40px;
     transform: rotate(180deg);
 }
@@ -339,6 +354,8 @@ img.top__img {
 
 .module__content {
     height: 100%;
+    width: 90%;
+    margin: 2rem;
 }
 
 /*=============================================
@@ -483,14 +500,14 @@ video {
 }
 
 .formulario {
-    background-color: var(--color-green);
+    background-color: var(--color-green_dark);
     height: 100%;
 }
 
 .formulario__content {
     /* background:var(--color-green); */
     width: 80%;
-    padding: 40px;
+    /* padding: 40px; */
     margin: 0 auto;
     display: block;
 }
@@ -515,6 +532,7 @@ input[type="text"], input[type="email"] {
     text-align: left;
     padding: 5px;
     font-family: var(--font-secondary);
+    margin: 20px 0px;
 }
 
 textarea {
@@ -560,8 +578,8 @@ h4 {
 =                NEW ACCORDION                =
 =============================================*/
 .accordion {
-    max-width: 90%;
-    margin: 6rem auto;
+    max-width: 1200px;
+    margin: 4rem auto;
     width: 90%;
     font-family: var(--font-secondary);
     /* background: #f4f4f4; */
@@ -574,7 +592,7 @@ h4 {
 }
 
   .accordion__title {
-    font-size: 0.9em;
+    font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 1rem 1.5rem;
@@ -604,7 +622,7 @@ h4 {
 /*=====  End of NEW ACCORDION  ======*/
 
 form#mc-embedded-subscribe-form {
-    PADDING: 25PX;
+    PADDING: 65px 0px;
 }
 
 
@@ -693,4 +711,16 @@ form#mc-embedded-subscribe-form {
         display: block;
     }
     
+}
+._3col {display: grid;grid-template-columns: repeat(3, 1fr);text-align: center;height: fit-content;}
+
+.form--bggreen {
+    background-color: var(--color-green);
+	transition: all .2s ease-in-out;
+	border-bottom: 5px solid var(--color-green_dark);
+}
+
+.form--bggreen_dark {
+    background-color: var(--color-green_dark);
+	transition: all .2s ease-in-out;
 }
