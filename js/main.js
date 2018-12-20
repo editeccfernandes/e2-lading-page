@@ -1,22 +1,27 @@
 //Back to top
 //confirmação da submissão
 //Easter egg na consola
+
+
 if ($('#landing-page')) {
 	var document_height = $(document).height();
 	var window_height = $(window).height();
 	var window_scroll_top = $(window).scrollTop();
 	$(function() {
-		var nav = $(".navigation");
 		$(window).scroll(function() {
 			var scroll = $(window).scrollTop();
-			if (scroll > 500) {
-				nav.addClass('navigation--small');
+			if (scroll > 300) {
 				$('.top').fadeIn(300);
+				$('.navigation').addClass('visible');
+
 			} else if (scroll == 0) {
-				nav.removeClass("navigation--small");
 				$('.top').fadeOut(300);
+				$('.navigation').removeClass('visible');
+
 			} else {
 				$('.top').fadeOut(300);
+				$('.navigation').removeClass('visible');
+
 			}
 		});
 	});
@@ -76,9 +81,9 @@ if ($('#landing-page')) {
 			});
 			request.execute(function(response) {
 				for (var i = 0; i < response.items.length; i++) {
-					//console.log(response);
+					console.log(response);
 					//console.log(response.items[i].snippet.title  + "https://www.youtube.com/watch?v="+ response.items[i].snippet.resourceId.videoId + response.items[i].snippet.thumbnails.default.url)
-					$('.youtube--wrapper--col--thumbs').append('<div class="youtube--thumb--wrapper"> <div class="youtube--thumb" data-youtubeid="' + response.items[i].snippet.resourceId.videoId + '"style="background-image: url(' + response.items[i].snippet.thumbnails.default.url + ')"><\/div> <div class="youtube--thumb--caption"><\/div><\/div>');
+					$('.youtube--wrapper--col--thumbs').append('<div class="youtube--thumb--wrapper"> <div class="youtube--thumb" data-youtubeid="' + response.items[i].snippet.resourceId.videoId + '"style="background-image: url(' + response.items[i].snippet.thumbnails.default.url + ')"><\/div> <div class="youtube--thumb--caption">'+ response.items[i].snippet.title + '<\/div><\/div>');
 					$('.youtube--thumb').on('click', function() {
 						var id = $(this).attr('data-youtubeid');
 						//console.log($('.youtube--wrapper--video iframe')[0].src = 'https://www.youtube.com/embed/'+ id)
