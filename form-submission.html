@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> E2 - Newsletter </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https:////cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/youtube.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="media/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="media/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="media/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="media/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="media/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="media/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="media/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="media/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="media/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="media/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="media/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#39b080">
+    <meta name="msapplication-TileImage" content="media/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#39b080">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://editeccfernandes.github.io/e2-lading-page/media/redes.jpg" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="	E2 - O programa da Escola Superior de Comunicação Social" />
+    <meta name="twitter:title" content="	E2 - O programa da Escola Superior de Comunicação Social">
+    <META name="description" content="E2 é o nome do programa semanal que a Escola Superior de Comunicação Social transmite, desde maio de 2004, na RTP2. O programa está inserido num projeto pedagógico de formação multidisciplinar dos alunos e tem um formato de magazine de 25 minutos, englobando várias áreas do conhecimento.">
+    <meta property="og:description" content="E2 é o nome do programa semanal que a Escola Superior de Comunicação Social transmite, desde maio de 2004, na RTP2. O programa está inserido num projeto pedagógico de formação multidisciplinar dos alunos e tem um formato de magazine de 25 minutos, englobando várias áreas do conhecimento." />
+    <meta name="twitter:description" content="E2 é o nome do programa semanal que a Escola Superior de Comunicação Social transmite, desde maio de 2004, na RTP2. O programa está inserido num projeto pedagógico de formação multidisciplinar dos alunos e tem um formato de magazine de 25 minutos, englobando várias áreas do conhecimento.">
+    <meta name="twitter:image" content="https://editeccfernandes.github.io/e2-lading-page/media/redes.jpg">
+</head>
+
+<body>
+    <div class="fullpage--container bg--green" id="modal">
+        <div class="fullpage--modal">
+            <div class="fullpage--modal--title">A tua mensagem foi enviada!</div>
+            <div class="fullpage--modal--text">A tua mensagem foi enviada e será respondida o mais cedo possível.<br>
+                Obrigado por entrares em contacto connosco. <br> <br>
+                <p class="bold"> Esta página vai-te encaminhar para a nossa página inicial.</p>
+            </div>
+            <div class="fullpage--modal--number">5</div>
+        </div>
+
+    </div>
+    <script src="js/jquery.js" type="text/javascript">
+    </script>
+    <script src="js/main.js">
+    </script>
+
+    <script>
+        var counter = 5;
+        var interval = setInterval(function () {
+            counter--;
+            jQuery(".fullpage--modal--number").html(counter);
+            if (counter == 0) {
+                //Do something
+                window.location.href = "./index.html"
+                // Stop the counter
+                clearInterval(interval);
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
