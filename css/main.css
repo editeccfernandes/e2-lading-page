@@ -705,7 +705,7 @@ form#mc-embedded-subscribe-form {
 .youtube--wrapper {
     /* background: green; */
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2.3fr 1fr;
     padding: 10px;
     max-width: 1200px;
     margin: 0 auto;
@@ -719,12 +719,14 @@ form#mc-embedded-subscribe-form {
 }
 
 .youtube--wrapper--col--latestvideo {
-    background: blue;
     width: 100%;
     padding-bottom: 56.25%;
     /* 16:9 */
     position: relative;
-    background: blue;
+    background: url('../media/loading.gif');
+    background-size: contain;
+    background-color: white;
+    background-position: center;
 }
 
 .youtube--wrapper--col--thumbs {
@@ -734,12 +736,12 @@ form#mc-embedded-subscribe-form {
     height: 100%;
     align-content: space-between;
     /* margin-left: 10px; */
-    background: var(--color-grey_light);
+    background: var(--color-grey_dark);
 }
 
 .youtube--thumb {
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: 57.25%;
     /* 16:9 */
     position: relative;
     background: pink;
@@ -829,12 +831,12 @@ img {}
 
 .youtube--thumb--caption {
     font-family: var(--font-secondary);
-    color: black;
+    color: white;
 }
 
 .youtube--thumb--wrapper {
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
 }
 
 .youtube--thumb--wrapper:hover {
