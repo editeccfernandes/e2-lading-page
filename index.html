@@ -1,134 +1,353 @@
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+
 <head>
-<title></title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>
+		E2 - O programa da Escola Superior de Comunicação Social
+	</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href='https:////cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet'>
+	<link href="css/youtube.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="css/main.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="media/favicon/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+	<link href="media/favicon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+	<link href="media/favicon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+	<link href="media/favicon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+	<link href="media/favicon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+	<link href="media/favicon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+	<link href="media/favicon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+	<link href="media/favicon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+	<link href="media/favicon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+	<link href="media/favicon/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+	<link href="media/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+	<link href="media/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+	<link href="media/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+	<link href="media/favicon/manifest.json" rel="manifest">
+	<meta content="#39b080" name="msapplication-TileColor">
+	<meta content="media/favicon/ms-icon-144x144.png" name="msapplication-TileImage">
+	<meta content="#39b080" name="theme-color">
+	<meta content="website" property="og:type">
+	<meta content="https://editeccfernandes.github.io/e2-lading-page/media/redes.jpg" property="og:image">
+	<meta content="summary_large_image" name="twitter:card">
+	<meta content=" E2 - O programa da Escola Superior de Comunicação Social" property="og:title">
+	<meta content=" E2 - O programa da Escola Superior de Comunicação Social" name="twitter:title">
+	<meta content="E2 é o nome do programa semanal que a Escola Superior de Comunicação Social transmite, desde maio de 2004, na RTP2. O programa está inserido num projeto pedagógico de formação multidisciplinar dos alunos e tem um formato de magazine de 25 minutos, englobando várias áreas do conhecimento."
+	 name="description">
+	<meta content="E2 é o nome do programa semanal que a Escola Superior de Comunicação Social transmite, desde maio de 2004, na RTP2. O programa está inserido num projeto pedagógico de formação multidisciplinar dos alunos e tem um formato de magazine de 25 minutos, englobando várias áreas do conhecimento."
+	 property="og:description">
+	<meta content="E2 é o nome do programa semanal que a Escola Superior de Comunicação Social transmite, desde maio de 2004, na RTP2. O programa está inserido num projeto pedagógico de formação multidisciplinar dos alunos e tem um formato de magazine de 25 minutos, englobando várias áreas do conhecimento."
+	 name="twitter:description">
+	<meta content="https://editeccfernandes.github.io/e2-lading-page/media/redes.jpg" name="twitter:image">
 </head>
 
-<style>
-
-body {
-
-	background-color: white;
-	background-attachment: fixed;
-	color: #333;
-}
-
-.box {
-	border-radius: 3px;
-	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
-}
-
-.lightbox {
-	zoom: 1.5;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(10, 10, 10, 0.8);
-	text-align: center;
-	margin: auto;
-
-}
-
-div.horizontal {
-	display: flex;
-	justify-content: center;
-	height: 100%;
-}
-
-div.vertical {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-}
-
-::-webkit-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-::-moz-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-:-ms-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-</style>
-
 <body>
-
-	<div id="loginbox" class="lightbox" >
-		<div class="horizontal">
-			<div class="vertical">
-				<div class="box">
-					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
-					<p id="wrongPassword" style="display: none">wrong password</p>
+	<!--INICIO DO CONTEUDO-->
+	<div class="container" id="landing-page">
+		<a  class="imagem-escs" href="https://www.escs.ipl.pt/" target="_blank"><img src="media/dobra.png"><img></a>
+		<nav class="navigation navigation--small">
+			<div class="navigation__item">
+				<div class="navigation__item__logo">
+					<img src="media/logo_normal.svg">
 				</div>
 			</div>
-		</div>
+			<div class="navigation__item">
+				<div class="navigation__item__menu">
+					<div class="navigation__item__menu__item">
+						<a href="#episodes">
+							<h6 id="episodes-nav">
+								Episódios
+							</h6>
+						</a>
+					</div>
+					<div class="navigation__item__menu__item">
+						<a href="#about">
+							<h6 id="about-nav">
+								Sobre o E2
+							</h6>
+						</a>
+					</div>
+					<div class="navigation__item__menu__item">
+						<a href="#contacts">
+							<h6 id="contacts-nav">
+								Contactos
+							</h6>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="navigation__item">
+				<div class="navigation__item__social">
+					<div class="navigation__item__social__item">
+						<a href="https://www.youtube.com/e2escs" target="_blank"><img src="media/social_yt.svg"></a>
+					</div>
+					<div class="navigation__item__social__item">
+						<a href="https://www.instagram.com/e2.escs/" target="_blank"><img src="media/social_ig.svg"></a>
+					</div>
+					<div class="navigation__item__social__item">
+						<a href="https://www.facebook.com/e2.escs/" target="_blank"><img src="media/social_fb.svg"></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<main>
+			<div class="top">
+				<button class="bg--yellow"><img class="top__img" src="media/arrow.svg"></button>
+			</div>
+			<section class="module" id="home">
+				<div class="module__home">
+					<div class="module__home__image">
+						<div class="fullscreen-bg">
+							<video autoplay="" class="fullscreen-bg__video" loop="" muted="" poster="media/pic3.jpg">
+								<source src="media/video1sd.mp4" type="video/mp4">
+								<source type="video/webm">
+								<source type="video/ogg"></video>
+						</div>
+					</div>
+					<div class="module__home__content _2col">
+						<div class="module__home__content_block">
+							<img src="media/logo_normal.svg">
+						</div>
+						<div class="module__home__content_block">
+							<h2>
+								Bem vindo ao E2
+							</h2>
+							<p class="white">
+								E2 é o nome do programa semanal que a Escola Superior de Comunicação Social transmite, desde maio de 2004, na
+								RTP2. O programa está inserido num projeto pedagógico de formação multidisciplinar dos alunos e tem um formato
+								de magazine de 25 minutos, englobando várias áreas do conhecimento.
+							</p><a href="#about"><button class="button--red">Sabe mais!</button></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="module" id="episodes">
+				<div class="module__episodes _1col">
+					<div class="module__header">
+						<h3 class=" bg--red">
+							Episódios
+						</h3>
+					</div>
+					<div class="module__episodes__content">
+						<div class="module__episodes__content__videos">
+							<div class="youtube--wrapper">
+								<div class="youtube--wrapper--col">
+									<div class="youtube--wrapper--col--latestvideo">
+										<div class="youtube--wrapper--video"></div>
+									</div>
+								</div>
+								<div class="youtube--wrapper--col">
+									<div class="youtube--wrapper--col--thumbs"></div>
+								</div>
+							</div>
+						</div>
+						<div class="module__episode__content__cta">
+							<a href="https://www.youtube.com/e2escs" target="_blank"><button class="button--red button--cta">Vê
+									mais no nosso canal do Youtube!</button></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="module" id="about">
+				<div class="module__about">
+					<div class="module__about__image"></div>
+					<div class="module__about__text">
+						<div class="module__header">
+							<h3 class="bg--blue">
+								Sobre o E2
+							</h3>
+						</div>
+						<div class="accordion">
+							<div class="accordion__item">
+								<h5 class="accordion__title js-title">
+									Pequena História
+								</h5>
+								<p class="accordion__copy accordion__copy--open js-copy">
+									O E2 é um programa de televisivo essencialmente de entretenimento, humor, cultura e informação, lançado pela
+									Escola Superior de Comunicação Social, em Maio de 2004, na RTP2. Passa semanalmente aos domingos, às 20h00
+									(com repetições nas madrugadas de terças para quartas), e já conta com 15 temporadas.<br>
+									<br>
+									Funciona na ESCS como actividade extracurricular onde podem participar alunos de todos os cursos da escola,
+									sendo o objectivo permitir a formação multidisciplinar dos alunos e um contacto mais próximo com a realidade
+									profissional.<br>
+									<br>
+									Para além do programa para a RTP2, o E2 é todos os anos responsável por levar a cabo inúmeras parcerias que a
+									ESCS estabelece: desde a cobertura de conferências e festivais de cinema e de música à realização de programas
+									em locais de interesse para a ESCS, como foi o caso da edição de 2018 da Futurália, onde o E2 produziu e
+									realizou todo o programa referente a esse evento, com especial relevância para a transmissão em direto de uma
+									entrevista na rubrica Panorâmica. O E2 procura, assim, trazer para dentro da ESCS a dinâmica e os processos de
+									produção reais do mercado audiovisual, capacitando os alunos para uma aprendizagem mais alargada nas suas
+									áreas de estudo, através de numa verdadeira experiência profissional.
+								</p>
+							</div>
+							<div class="accordion__item">
+								<h5 class="accordion__title js-title">
+									Episódios
+								</h5>
+								<p class="accordion__copy js-copy">
+									Os conteúdos do E2 são baseados nas diferentes áreas de comunicação da ESCS e das restantes escolas do
+									Instituto Politécnico de Lisboa, bem como na envolvente externa que lhe está diretamente relacionada. Os temas
+									abordados neste magazine apresentam formatos variados, como o debate, a reportagem, a entrevista ou o vox-pop.
+									Enquanto atividade extracurricular, o E2 assume-se como um programa inovador, profissional e de espírito
+									jovem, estando aberto à participação de alunos de todos os cursos da Escola.<br>
+									<br>
+									Todos os programas são escritos, produzidos, realizados, apresentados e interpretados de raiz, a partir de
+									ideias e de formatos originais, criados exclusivamente para o E2. O programa é feito inteiramente por alunos
+									da escola, desde a sua idealização à sua concepção.
+								</p>
+							</div>
+							<div class="accordion__item">
+								<h5 class="accordion__title js-title">
+									Formato
+								</h5>
+								<p class="accordion__copy js-copy">
+									Tem um formato de magazine de 25 minutos, tendo conteúdos baseados nas áreas de conhecimento da ESCS e das
+									restantes escolas do Instituto Politécnico de Lisboa, bem como na envolvente externa que lhe está diretamente
+									relacionada. Os temas abordados assumem as mais variadas formas editoriais, como o documentário, a reportagem,
+									a entrevista, o vox-pop, a ficção e a arte audiovisual.
+								</p>
+							</div>
+						</div>
+						<div class="arrow-down">
+							<img src="media/arrow.svg">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="modules" id="contacts">
+				<div class="module__contacts">
+					<div class="module__header">
+						<h3 class="bg--green">
+							Contactos
+						</h3>
+					</div>
+					<div class="_3col">
+						<div class="module__content">
+							<h4>
+								Morada
+							</h4>
+							<p>
+								Campus de Benfica do IPL, 1549-014 Lisboa<br>
+								Gabinete E2 no piso -1
+							</p>
+						</div>
+						<div class="module__content">
+							<h4>
+								Contactos
+							</h4>
+							<p class="bold">
+								Produção
+							</p>
+							<p>
+								910 515 439
+							</p><br>
+							<p class="bold">
+								Geral
+							</p>
+							<p>
+								217 119 083
+							</p><br>
+						</div>
+						<div class="module__content">
+							<h4>
+								Email
+							</h4>
+							<p class="bold">
+								Produção
+							</p>
+							<p>
+								e2@escspro.org
+							</p><br>
+							<p class="bold">
+								Comunicação
+							</p>
+							<p>
+								e2comunicacao@escspro.org
+							</p><br>
+						</div>
+					</div>
+					<div class="_1col">
+						<div class="accordion">
+							<div class="accordion__item">
+								<h5 class="accordion__title js-title form--bggreen">
+									Formulário de Contacto
+								</h5>
+								<div class="accordion__copy js-copy form--bggreen_dark">
+									<form action="mail.php" class="formulario" id="contact-form" method="post" name="contact-form">
+										<div class="formulario__content">
+											<div class="formulario__content__field">
+												<p class="form-label">
+													Nome
+												</p><input name="name" type="text">
+											</div>
+											<div class="formulario__content__field">
+												<p class="form-label">
+													Email
+												</p><input name="email" type="text">
+											</div>
+											<div class="formulario__content__field">
+												<p class="form-label">
+													Assunto
+												</p><input name="subject" type="text">
+											</div><br>
+											<div class="formulario__content__field">
+												<p class="form-label text-area">
+													Mensagem
+												</p>
+												<textarea cols="27" name="message" rows="6"></textarea><br>
+											</div>
+											<div class="buttons">
+												<input class="button button--blue" type="submit" value="Enviar"> <input class="button button--red" type="reset"
+												 value="Apagar">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="_1col" style=" text-align: center; background-color: #e8423a">
+						<!-- Begin Mailchimp Signup Form -->
+						<div id="mc_embed_signup">
+							<form action="https://ipl.us15.list-manage.com/subscribe/post?u=e5ac0bd5c30c925dfe3466491&amp;id=38f025cae1"
+							 class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate=""
+							 target="_blank">
+								<div id="mc_embed_signup_scroll">
+									<label for="mce-EMAIL"></label>
+									<h4 class="white">
+										<label for="mce-EMAIL">Recebe as nossas newsletters!</label>
+									</h4>
+									<p class="white">
+										<label for="mce-EMAIL">Fica sempre atualizado sobre as novas da ESCS e do E2</label>
+									</p><input class="email" id="mce-EMAIL" name="EMAIL" placeholder="o teu endereço de email" required="" type="email"
+									 value="">
+									<div aria-hidden="true" style="position: absolute; left: -5000px;">
+										<input name="b_e5ac0bd5c30c925dfe3466491_38f025cae1" tabindex="-1" type="text" value="">
+									</div><input class="button button--blue" name="subscribe" type="submit" value="Subscreve!">
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--End mc_embed_signup-->
+				</div>
+			</section>
+		</main>
 	</div>
-
-
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-
-
-	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
-
-	<script type="text/javascript">
-	"use strict";
-
-
-	function loadPage(pwd) {
-
-		var hash= pwd;
-		hash= Sha1.hash(pwd);
-		var url= hash + "/index.html";
-
-		$.ajax({
-			url : url,
-			dataType : "html",
-			success : function(data) {
-
-				window.location= url;
-
-			},
-			error : function(xhr, ajaxOptions, thrownError) {
-
-
-				parent.location.hash= hash;
-
-				//$("#wrongPassword").show();
-				$("#password").attr("placeholder","wrong password");
-				$("#password").val("");
-			}
-		});
-	}
-
-
-	$("#loginbutton").on("click", function() {
-		loadPage($("#password").val());
-	});
-	$("#password").keypress(function(e) {
-		if (e.which == 13) {
-
-			loadPage($("#password").val());
-		}
-	});
-	$("#password").focus();
-
+	<footer class="_3col bg--grey--dark">
+		<div class="footer--item">a</div>
+		<div class="footer--item">b</div>
+		<div class="footer--item">c</div>
+		<div class="footer--item">d</div>
+		<div class="footer--item">e</div>
+		<div class="footer--item">f</div>
+	</footer>
+	<script src="js/jquery.js" type="text/javascript">
 	</script>
-
+	<script src="js/main.js">
+	</script>
+	<script src="https://apis.google.com/js/client.js?onload=onGoogleLoad">
+	</script>
 </body>
+
 </html>
