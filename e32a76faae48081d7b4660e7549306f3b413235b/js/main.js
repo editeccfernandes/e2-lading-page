@@ -81,7 +81,7 @@ if ($('#landing-page')) {
 			});
 			request.execute(function(response) {
 				for (var i = 0; i < response.items.length; i++) {
-					console.log(response);
+					//console.log(response);
 					//console.log(response.items[i].snippet.title  + "https://www.youtube.com/watch?v="+ response.items[i].snippet.resourceId.videoId + response.items[i].snippet.thumbnails.default.url)
 					$('.youtube--wrapper--col--thumbs').append('<div class="youtube--thumb--wrapper"> <div class="youtube--thumb" data-youtubeid="' + response.items[i].snippet.resourceId.videoId + '"style="background-image: url(' + response.items[i].snippet.thumbnails.default.url + ')"><\/div> <div class="youtube--thumb--caption">'+ response.items[i].snippet.title + '<\/div><\/div>');
 					$('.youtube--thumb').on('click', function() {
@@ -90,7 +90,7 @@ if ($('#landing-page')) {
 						$('.youtube--wrapper--video iframe')[0].src = 'https://www.youtube.com/embed/' + id
 					})
 				}
-				console.log(response.items[0].snippet.resourceId.videoId)
+				//console.log(response.items[0].snippet.resourceId.videoId)
 				$('.youtube--wrapper--video').append('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + response.items[0].snippet.resourceId.videoId + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><\/iframe>')
 			});
 		});

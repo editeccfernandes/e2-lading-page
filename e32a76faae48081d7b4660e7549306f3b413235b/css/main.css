@@ -280,7 +280,7 @@ button, .button {
 }
 
 .navigation--small {
-    height: 50px;
+    height: 65px;
 }
 
 .navigation--small img {
@@ -847,4 +847,12 @@ img {}
 .youtube--thumb--wrapper:hover .youtube--thumb--caption {
     color: white;
      transition: all .2s ease-in-out;
+}
+
+a.imagem-escs img {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 65px;
+    z-index: 999999999;
 }
