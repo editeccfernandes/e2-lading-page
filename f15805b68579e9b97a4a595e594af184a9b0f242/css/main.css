@@ -138,6 +138,7 @@ h6:hover {
 p {
     font-family: var(--font-secondary);
     margin-bottom: 10px;
+    line-height: 1.2em;
 }
 
 button, .button {
@@ -260,6 +261,7 @@ button, .button {
     z-index: 1;
     max-width: 1200px;
     margin: auto;
+    padding: 40px 0px;
 }
 
 /*=====  End of GRID SYSTEM  ======*/
@@ -282,6 +284,32 @@ button, .button {
     width: 100vw;
     transition: all .2s ease-in-out;
 }
+.navigation{
+    opacity: 0;
+    display: grid;
+    transition: all .2s ease-in-out;
+    pointer-events: none;
+    z-index: -1;
+ }
+ 
+ .visible{
+     opacity: 1 !important;
+     transition: all .2s ease-in-out;
+     z-index: 100;
+     pointer-events: all;
+ }
+ 
+ .navigation__item__menu {
+     display: block;
+     /* float: right; */
+     width: fit-content;
+ }
+ 
+ .navigation__item__social {
+     margin: 0 auto;
+     width: fit-content;
+ }
+
 
 .navigation img {
     transition: all .2s ease-in-out;
@@ -300,6 +328,8 @@ button, .button {
 .not-fixed {
     position: relative;
 }
+
+
 
 .filler {
     height: 70px;
@@ -325,7 +355,10 @@ button, .button {
     height: 30px;
     display: inline-block;
     margin: 5px;
+    width: 30px;
 }
+
+
 
 .top {
     position: fixed;
@@ -341,6 +374,13 @@ img.top__img {
     transform: rotate(180deg);
 }
 
+.navigation-visible {
+    opacity: 1 !important;
+    background-color: transparent;
+    display: grid !important;
+    pointer-events: all;
+    z-index: 98;
+}
 /*=====  End of NAVIGATION BAR  ======*/
 
 /*=============================================
@@ -370,7 +410,7 @@ img.top__img {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    /* height: 500px; */
+    height: 420px;
     /* width: 100%; */
 }
 
@@ -381,7 +421,7 @@ img.top__img {
     background-repeat: no-repeat;
     background-image: url("../media/pic1.jpg");
     background-position: center center;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
     position: absolute;
     z-index: -1;
     max-width: 100%;
@@ -408,7 +448,7 @@ img.top__img {
 }
 
 .module__home__content_block img {
-    height: 300px;
+    height: 220px;
 }
 
 .module__episode__content__cta {
@@ -574,7 +614,7 @@ h4 {
 =============================================*/
 
 .accordion {
-    max-width: 1200px;
+    max-width: 700px;
     margin: 4rem auto;
     width: 90%;
     font-family: var(--font-secondary);
@@ -612,7 +652,7 @@ h4 {
     padding: 1rem;
     color: var(--color-white);
     line-height: 1.6;
-    font-size: 1em;
+    font-size: .95em;
 }
 
 .accordion__copy--open {
@@ -647,7 +687,6 @@ form#mc-embedded-subscribe-form {
 
 .form--bggreen_dark {
     background-color: var(--color-green_dark);
-    transition: all .2s ease-in-out;
 }
 
 .youtube--wrapper {
@@ -748,37 +787,60 @@ form#mc-embedded-subscribe-form {
     padding-bottom: 1rem;
 }
 
+footer{
+    background-color: var(--color-grey_dark);
+}
+
+.footer-wrapper{
+
+padding: 30px 0px;
+}
+
 .footer--item {
     padding: 1rem;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    font-family: var(--font-secondary);
+    color: white;
+    font-size: .95rem;
+    text-align: center;
 }
 
-.navigation{
-   opacity: 0;
-   transition: all .2s ease-in-out;
-
+span.footer--item--title {
+    font-family: var(--font-primary);
+    font-size: 1.15rem;
+    font-weight: bold;
 }
 
-.visible{
-    opacity: 1 !important;
-    transition: all .2s ease-in-out;
+.logo-escs {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    height: 45px;
 }
 
-.navigation__item__menu {
-    display: block;
-    /* float: right; */
-    width: fit-content;
+.rtp-play {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    height: 20px;
 }
 
-img {}
-
-.navigation__item__social {
-    margin: 0 auto;
-    width: fit-content;
+.heart img {
+    /* height: 10px; */
+    width: 19px;
+    display: inline;
+    vertical-align: middle;
 }
+
+
 
 .youtube--thumb--caption {
     font-family: var(--font-secondary);
     color: white;
+    font-size: .9em;
+    margin-top: 5px;
 }
 
 .youtube--thumb--wrapper {
@@ -802,6 +864,30 @@ a.imagem-escs img {
     right: 0;
     height: 65px;
     z-index: 999999999;
+}
+
+#youtube-icon, #instagram-icon, #facebook-icon{
+    fill: white;
+    transition: all .2s ease-in-out;
+
+}
+
+a svg:hover #youtube-icon{
+    fill: #ff0000;
+    transition: all .2s ease-in-out;
+
+}
+
+a svg:hover #instagram-icon{
+    fill: #e1306c;
+    transition: all .2s ease-in-out;
+
+}
+
+a svg:hover #facebook-icon{
+    fill: #3b5998;
+    transition: all .2s ease-in-out;
+
 }
 
 @media screen and (max-width:700px) {
