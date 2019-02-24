@@ -101,4 +101,28 @@ if ($('#landing-page')) {
 			});
 		});
 	}
+	$(document).ready(function(){
+		// menu click event
+		$('.mobile-menu-button').on('click', function() {
+			$(this).toggleClass('active');
+				if($(this).hasClass('active')) {
+					$('.mobile-menu-button-wrapper').addClass('active');
+				}
+				else {
+					$('.mobile-menu-button-wrapper').removeClass('active');
+				}
+		});
+
+		$('.mobile-menu-button-wrapper ul li').on ('click', function(){
+			$('.mobile-menu-button').toggleClass('active');
+			if($('.mobile-menu-button').hasClass('active')) {
+				$('.mobile-menu-button-wrapper').addClass('active');
+			}
+			else {
+				$('.mobile-menu-button-wrapper').removeClass('active');
+			}
+
+		})
+	});
 }
+
