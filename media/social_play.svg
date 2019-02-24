@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g id="Rulers">
+    </g>
+    <g id="Layer1">
+        <path d="M23.068,0C35.717,0.014 46.121,10.419 46.135,23.068C46.135,35.722 35.722,46.135 23.068,46.135C10.413,46.135 0,35.722 0,23.068C0,10.413 10.413,0 23.068,0ZM20.82,12.373L13.901,8.274C13.463,8.015 12.917,8.339 12.917,8.857L12.917,37.278C12.917,37.796 13.463,38.12 13.901,37.861L20.82,33.763L20.82,12.373ZM29.256,17.37L28.339,16.827L21.645,12.861L21.645,33.275L28.968,28.937L29.256,28.765L29.256,17.37ZM37.891,22.485L30.081,17.858L30.081,28.277L37.891,23.651C38.328,23.392 38.328,22.744 37.891,22.485Z" style="fill:white;fill-rule:nonzero;"/>
+    </g>
+</svg>

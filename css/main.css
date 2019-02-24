@@ -74,6 +74,7 @@ table {
 
 :root {
     --color-grey_dark: #1d1e1c;
+    --color-black: #000;
     --color-grey_middle: #b1b1b1;
     --color-grey_light: #e6e5e5;
     --color-red: #e8423a;
@@ -88,6 +89,10 @@ table {
     --font-secondary: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.bg--black{
+    background-color: var(--color-black)
+}
+
 /*=====  End of VARIABLES  ======*/
 
 /*=============================================
@@ -100,6 +105,7 @@ table {
 
 body {
     font-size: 16px;
+    background-color: var(--color-grey_light);
 }
 
 img {
@@ -141,8 +147,16 @@ p {
     line-height: 1.2em;
 }
 
+.text-center{
+    text-align: center;
+}
+
+.content-max-width{
+    width: 960px;
+}
+
 button, .button {
-    padding: 10px 20px;
+    padding: 15px 25px;
     width: max-content;
     margin: 0 auto;
     text-transform: uppercase;
@@ -154,9 +168,10 @@ button, .button {
     cursor: pointer;
     transition: all .3s ease;
     margin: 20px auto;
+    font-size: 1rem;
 }
 
-.button--red:hover, .button--blue:hover {
+.button--red:hover, .button--blue:hover, .button--green:hover {
     transform: scale(1.1);
 }
 
@@ -170,6 +185,10 @@ button, .button {
 
 .button--grey {
     background-color: var(--color-grey_dark);
+}
+
+.button--green{
+    background-color: var(--color-green)
 }
 
 .button--cta {
@@ -235,6 +254,7 @@ button, .button {
 .bg--grey--dark {
     background-color: var(--color-grey_dark)
 }
+
 
 /*=====  End of GENERAL STYLES  ======*/
 
@@ -307,6 +327,7 @@ button, .button {
  
  .navigation__item__social {
      margin: 0 auto;
+     padding-right: 50px;
      width: fit-content;
  }
 
@@ -434,8 +455,8 @@ img.top__img {
     right: 0;
     left: 0;
     height: 100%;
-    background-image: linear-gradient(to top, var(--color-yellow), var(--color-yellow));
-    opacity: .75;
+    background-image: linear-gradient(to right,rgba(252, 195, 71, 1), rgba(184, 143, 54, .7));
+    /* opacity: .75; */
     z-index: 1;
 }
 
@@ -474,7 +495,7 @@ img.top__img {
     background-image: url("../media/pic1.jpg");
     background-position: center center;
     background-attachment: fixed;
-    clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+    clip-path: polygon(0 90px, 100% 0, 100% 82%, 0 100%);
     position: absolute;
     z-index: -1;
 }
@@ -493,6 +514,7 @@ img.top__img {
 .module__about__text {
     display: block;
     padding: 40px 0px;
+    padding-bottom: 90px;
 }
 
 /*=====  End of ABOUT  ======*/
@@ -526,6 +548,7 @@ img.top__img {
 .module__episodes {
     padding-top: 40px;
     display: block;
+    padding-bottom: 40px;
 }
 
 video {
@@ -564,7 +587,7 @@ input[type="text"], input[type="email"] {
     border: 0;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
     height: 30px;
-    width: calc(100% - 150px);
+    width: calc(100% - 190px);
     display: inline-block;
     text-align: left;
     padding: 5px;
@@ -614,7 +637,7 @@ h4 {
 =============================================*/
 
 .accordion {
-    max-width: 700px;
+    max-width: 960px;
     margin: 4rem auto;
     width: 90%;
     font-family: var(--font-secondary);
@@ -675,7 +698,16 @@ form#mc-embedded-subscribe-form {
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
     height: fit-content;
-    max-width: 1200px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+._4col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    height: fit-content;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -829,7 +861,7 @@ span.footer--item--title {
 
 .heart img {
     /* height: 10px; */
-    width: 19px;
+    width: 14px;
     display: inline;
     vertical-align: middle;
 }
@@ -866,7 +898,7 @@ a.imagem-escs img {
     z-index: 999999999;
 }
 
-#youtube-icon, #instagram-icon, #facebook-icon{
+#youtube-icon, #instagram-icon, #facebook-icon, #rtpPlay-icon{
     fill: white;
     transition: all .2s ease-in-out;
 
@@ -887,9 +919,12 @@ a svg:hover #instagram-icon{
 a svg:hover #facebook-icon{
     fill: #3b5998;
     transition: all .2s ease-in-out;
-
 }
 
+a svg:hover #rtpPlay-icon{
+fill: #0772FA;
+transition: all .2s ease-in-out;
+}
 @media screen and (max-width:700px) {
     ._1col, ._2col, ._3col {
         grid-template-columns: 1fr;
@@ -945,3 +980,50 @@ a svg:hover #facebook-icon{
         margin-top: 0px;
     }
 }
+
+
+/*=============================================
+=                POST CSS ADDS                =
+=============================================*/
+.no-padding {
+    padding: 0;
+}
+
+.madewithlove p {
+    font-family: monospace;
+    font-size: .75rem;
+}
+
+div#mc_embed_signup_scroll {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/*=====  End of POST CSS ADDS  ======*/
+
+
+/*=============================================
+=              EPISODES SECTION               =
+=============================================*/
+
+#episodes{
+    background-color: var(--color-grey_light);
+    clip-path: polygon(0 14%, 100% 0, 100% 92%, 0 100%);
+    z-index: 2;
+}
+
+
+#episodes:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 22%;
+    background-image: linear-gradient(to bottom, var(--color-grey_middle), var(--color-grey_light));
+    /* opacity: .75; */
+    z-index: -1;
+    overflow: v;
+}
+
+/*=====  End of EPISODES SECTION  ======*/
+
