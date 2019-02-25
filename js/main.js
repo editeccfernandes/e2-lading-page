@@ -1,4 +1,8 @@
-$(window).on("load", function () {
+//Back to top
+//confirmação da submissão
+//Easter egg na consolaa
+
+if ($('#landing-page')) {
 	var document_height = $(document).height();
 	var window_height = $(window).height();
 	var window_scroll_top = $(window).scrollTop();
@@ -30,7 +34,7 @@ $(window).on("load", function () {
 		var viewport_bottom = window_scroll_top + $(window).height();
 		return element_height > window_scroll_top && offset_top < viewport_bottom;
 	};
-	
+	/*
 	$(window).on('resize scroll', function() {
 		if($('#destaques').inviewport()){
 			$('#destaques-nav').addClass('bg--green')
@@ -64,7 +68,7 @@ $(window).on("load", function () {
 			$('#contacts-nav').removeClass(' bg--green');
 			$('#about-nav').removeClass(' bg--blue');
 		}
-	});
+	});*/
 	var $title = $('.js-title');
 	var copy = '.js-copy';
 	$title.click(function() {
@@ -125,6 +129,5 @@ $(window).on("load", function () {
 
 		})
 	});
+}
 
-
-})
