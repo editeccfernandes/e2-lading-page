@@ -1,9 +1,4 @@
-//Back to top
-//confirmação da submissão
-//Easter egg na consola
-
-
-if ($('#landing-page')) {
+$(window).on("load", function () {
 	var document_height = $(document).height();
 	var window_height = $(window).height();
 	var window_scroll_top = $(window).scrollTop();
@@ -35,7 +30,7 @@ if ($('#landing-page')) {
 		var viewport_bottom = window_scroll_top + $(window).height();
 		return element_height > window_scroll_top && offset_top < viewport_bottom;
 	};
-	/*
+	
 	$(window).on('resize scroll', function() {
 		if($('#destaques').inviewport()){
 			$('#destaques-nav').addClass('bg--green')
@@ -69,7 +64,7 @@ if ($('#landing-page')) {
 			$('#contacts-nav').removeClass(' bg--green');
 			$('#about-nav').removeClass(' bg--blue');
 		}
-	});*/
+	});
 	var $title = $('.js-title');
 	var copy = '.js-copy';
 	$title.click(function() {
@@ -130,5 +125,6 @@ if ($('#landing-page')) {
 
 		})
 	});
-}
 
+
+})
