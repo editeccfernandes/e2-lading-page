@@ -1,8 +1,5 @@
-//Back to top
-//confirmação da submissão
-//Easter egg na consolaa
 
-if ($('#landing-page')) {
+$(document).ready(function () {
 	var document_height = $(document).height();
 	var window_height = $(window).height();
 	var window_scroll_top = $(window).scrollTop();
@@ -12,14 +9,18 @@ if ($('#landing-page')) {
 			if (scroll > 300) {
 				$('.top').fadeIn(300);
 				$('.navigation').addClass('visible');
+				$('.small_logo').addClass('visible');
 
 			} else if (scroll == 0) {
 				$('.top').fadeOut(300);
 				$('.navigation').removeClass('visible');
+				$('.small_logo').removeClass('visible');
 
 			} else {
 				$('.top').fadeOut(300);
 				$('.navigation').removeClass('visible');
+				$('.small_logo').removeClass('visible');
+
 
 			}
 		});
@@ -77,7 +78,48 @@ if ($('#landing-page')) {
 		return false;
 	}) 
 
-	function onGoogleLoad() {
+
+
+		// menu click event
+		$('.mobile-menu-button').on('click', function () {
+			$(this).toggleClass('active');
+			if ($(this).hasClass('active')) {
+				$('.mobile-menu-button-wrapper').addClass('active');
+			}
+			else {
+				$('.mobile-menu-button-wrapper').removeClass('active');
+			}
+		});
+		//Menu Mobile
+		$('.mobile-menu-button-wrapper ul li').on('click', function () {
+			$('.mobile-menu-button').toggleClass('active');
+			if ($('.mobile-menu-button').hasClass('active')) {
+				$('.mobile-menu-button-wrapper').addClass('active');
+			}
+			else {
+				$('.mobile-menu-button-wrapper').removeClass('active');
+			}
+
+		})
+
+
+	//COCKPIT
+	fetch('http://e2bo.000webhostapp.com/api/singletons/get/destaque?token=fc9c9470cf6f558ec367aa436c61d1')
+	.then(function(response) {
+		return response.json();
+	  })
+	  .then(function(results) {
+		//console.log(JSON.stringify(results));
+		$('.destaques_headline').text(results.headline)
+		$('.destaques_copy').text(results.copy)
+		$('#destaques').css('background-image', 'url(uploads/'+results.image+')')
+		$('.destaques_button').attr('href', results.link)
+	  });
+	
+	});
+
+
+	  function onGoogleLoad() {
 		gapi.client.setApiKey('AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0');
 		gapi.client.load('youtube', 'v3', function () {
 			var request = gapi.client.youtube.playlistItems.list({
@@ -106,28 +148,3 @@ if ($('#landing-page')) {
 			});
 		});
 	}
-	$(document).ready(function () {
-		// menu click event
-		$('.mobile-menu-button').on('click', function () {
-			$(this).toggleClass('active');
-			if ($(this).hasClass('active')) {
-				$('.mobile-menu-button-wrapper').addClass('active');
-			}
-			else {
-				$('.mobile-menu-button-wrapper').removeClass('active');
-			}
-		});
-		//Menu Mobile
-		$('.mobile-menu-button-wrapper ul li').on('click', function () {
-			$('.mobile-menu-button').toggleClass('active');
-			if ($('.mobile-menu-button').hasClass('active')) {
-				$('.mobile-menu-button-wrapper').addClass('active');
-			}
-			else {
-				$('.mobile-menu-button-wrapper').removeClass('active');
-			}
-
-		})
-	});
-}
-
