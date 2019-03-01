@@ -1385,6 +1385,7 @@ section#destaques:before {
 
 span.rubrica-item-img img {
     width: auto;
+    height: 100%;
 }
 
 span.rubrica-item-header-text {
@@ -1519,5 +1520,9 @@ span.rubrica-item-copy span {
         opacity: 1;
         transition: all .2s ease-in-out;
     
+    }
+
+    .rubrica-item {
+        display: block;
     }
 } 
