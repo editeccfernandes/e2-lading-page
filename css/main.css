@@ -1522,7 +1522,7 @@ span.rubrica-item-copy span {
     
     }
 
-    .rubrica-item {
-        display: block;
+    span.rubrica-item {
+           display: block;
     }
 } 
